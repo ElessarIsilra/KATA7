@@ -1,6 +1,7 @@
 package kata7.application.swing;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.PopupMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,7 +27,7 @@ public class Toolbar extends JPanel implements AttributeDialog, PopulationDialog
     private JComboBox combo;
     
     public Toolbar(Map<String, Command> commands) {
-        super(new BorderLayout());
+        super(new FlowLayout());
         this.commands = commands;
         this.add(mailDomainAttribute());
         this.add(firstMailAttribute());
